@@ -21,6 +21,9 @@ function calcular() {
   } else if(pb && pa){
     document.getElementById('resultado').textContent =
     'Makinon primero aprueba la programacíon de primero'
+  } else if (antiguo && repetidor){
+    document.getElementById('resultado').textContent =
+    'No puedes ser las dos cosas gamba'
   } else {
       //Calculo el precio base
     let precio = horas * 5;
