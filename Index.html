@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Matriculas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="Main.js"></script>
+</head>
+<body>
+  <h1>Formulario de Matrícula</h1>
+
+  <form>
+    <p>Horas semanales totales:</p>
+    <input type="number" min="0" step="1" value="0", id="horas"><br>
+
+
+    <p>Asignaturas</p>
+      <input id="m1" type="checkbox"> Matemáticas I (1º)<br>
+      <input id="pb" type="checkbox"> Programación Básica (1º)<br>
+      <input id="m2" type="checkbox"> Matemáticas II (2º)<br>
+      <input id="pa" type="checkbox"> Programación Avanzada (2º)
+
+
+    <p>Situación</p>
+      <input id="antiguo" type="checkbox"> Antiguo alumno (12% descuento)<br>
+      <input id="repetidor" type="checkbox"> Repetidor (precio se duplica)<br>
+
+
+    <!--Le paso al boton la funcion para que se le de y se active-->
+    <button type="button" onclick="calcular()">Calcular precio</button>
+  </form>
+
+  <div id="resultado">
+    
+  </div>
+
+  
+</body>
+</html>
