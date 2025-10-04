@@ -1,102 +1,103 @@
-/* ===== Estilo general ===== */
+/* ==========================
+   Estilos generales
+   ========================== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0a1a3c, #132f63);
-  color: #fdfdfd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  background: #f4f6f9;
+  color: #333;
 }
 
-/* ===== Título ===== */
+/* Encabezado */
 h1 {
-  background-color: #d4af37;
-  color: #0a1a3c;
-  width: 100%;
   text-align: center;
-  padding: 20px 0;
-  margin: 0 0 30px 0;
-  font-size: 2em;
-  letter-spacing: 1px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== Formulario ===== */
-form {
-  background: #fff;
+  margin: 20px 0;
+  font-size: 28px;
   color: #222;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  width: 380px;
 }
 
-p {
-  font-weight: bold;
-  margin-top: 18px;
-  margin-bottom: 8px;
-  color: #0a1a3c;
+/* ==========================
+   Formulario
+   ========================== */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ===== Inputs ===== */
+/* Inputs y checkboxes */
+input[type="number"],
+input[type="checkbox"] {
+  margin: 8px 0;
+}
+
+/* Input numérico */
 input[type="number"] {
   width: 100%;
-  padding: 8px 10px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 1em;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
-input[type="checkbox"] {
-  margin-right: 8px;
-  accent-color: #d4af37;
-}
-
-/* ===== Botón ===== */
+/* Botón */
 button {
-  background-color: #d4af37;
-  color: #0a1a3c;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
   border: none;
   border-radius: 6px;
-  padding: 10px 15px;
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 18px;
-  width: 100%;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #b9931f;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  background: #0056b3;
 }
 
-/* ===== Resultado ===== */
+/* ==========================
+   Resultado
+   ========================== */
 #resultado {
-  margin-top: 25px;
-  font-size: 1.2em;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #e9f7ef;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
   font-weight: bold;
   text-align: center;
-  color: #0a1a3c;
-  background-color: #fff8e1;
-  padding: 12px;
-  border-radius: 8px;
-  width: 380px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none; /* Se muestra solo cuando hay resultado */
 }
 
-/* ===== Animaciones suaves ===== */
-form, #resultado {
-  transition: all 0.3s ease-in-out;
-}
+/* ==========================
+   Responsividad (móviles)
+   ========================== */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
 
-form:hover {
-  transform: scale(1.01);
+  h1 {
+    font-size: 22px;
+  }
+
+  form {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
